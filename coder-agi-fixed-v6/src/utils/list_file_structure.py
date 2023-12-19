@@ -1,6 +1,3 @@
-import os
-
-
 def list_file_structure(path):
     file_structure = ""
     ignore_dirs = {".git", "node_modules", "venv", "__pycache__", "vendor"}
