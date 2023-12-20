@@ -25,14 +25,14 @@ class GPT4LawsuitWriter:
         return self.prompt_gpt4(prompt)
 
     def generate_lawsuit_draft(self, case_analysis):
-        prompt = f"Draft Lawsuit Document:\n\n{case_analysis}\n\nLawsuit Draft:"
+        prompt = f"Draft Lawsuit Document:\n\nCase Analysis:\n{case_analysis}\n\nLawsuit Draft:"
         return self.prompt_gpt4(prompt)
 
     def review_and_edit_draft(self, draft):
         return user_interface_module.review_and_edit(draft)
 
     def finalize_document(self, edited_draft):
-        prompt = f"Finalize Lawsuit Document:\n\n{edited_draft}\n\nFinal Document:"
+        prompt = f"Finalize Lawsuit Document:\n\nEdited Draft:\n{edited_draft}\n\nFinal Document:"
         return self.prompt_gpt4(prompt)
 
 def main():
