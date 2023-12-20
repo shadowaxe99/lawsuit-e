@@ -1,6 +1,6 @@
-from gpt4_lawsuit_writer import GPT4LawsuitWriter
-from user_interface_module import collect_lawsuit_details, review_and_edit
-from write_file_tool import WriteFileTool
+from .gpt4_lawsuit_writer import GPT4LawsuitWriter
+from .user_interface_module import collect_lawsuit_details, review_and_edit
+from .write_file_tool import WriteFileTool
 
 
 class LawsuitAgent:
