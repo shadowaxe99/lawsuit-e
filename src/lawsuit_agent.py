@@ -28,7 +28,7 @@ class LawsuitAgent:
             "file_path": file_path,
             "code": final_document
         }
-        self.write_file_tool.run(payload, config, llm, query_response)
+        self.write_file_tool.run(final_document, "path/to/lawsuit_document.txt")
 
 def main():
     lawsuit_agent = LawsuitAgent()
@@ -37,7 +37,7 @@ def main():
     draft = lawsuit_agent.generate_lawsuit_draft(case_analysis)
     edited_draft = lawsuit_agent.review_and_edit_draft(draft)
     final_document = lawsuit_agent.finalize_document(edited_draft)
-    lawsuit_agent.write_lawsuit_document(final_document, "path/to/lawsuit_document.txt")
+    print(final_document)
 
 if __name__ == "__main__":
     main()
